@@ -1,0 +1,116 @@
+Integration test
+
+hecking Python dependencies...
+Python requirements from /home/trex/esp/ESP8266_RTOS_SDK/requirements.txt are satisfied.
+Executing action: monitor
+Running idf_monitor in directory /home/trex/esp/LAB3
+Executing "/home/trex/.espressif/python_env/rtos3.4_py3.8_env/bin/python /home/trex/esp/ESP8266_RTOS_SDK/tools/idf_monitor.py -p /dev/ttyUSB0 -b 74880 /home/trex/esp/LAB3/build/hello-world.elf -m '/home/trex/.espressif/python_env/rtos3.4_py3.8_env/bin/python' '/home/trex/esp/ESP8266_RTOS_SDK/tools/idf.py' '-p' '/dev/ttyUSB0'"...
+--- idf_monitor on /dev/ttyUSB0 74880 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+
+ ets Jan  8 2013,rst cause:1, boot mode:(3,6)
+
+load 0x40100000, len 7032, room 16 
+tail 8
+chksum 0x94
+load 0x3ffe8408, len 24, room 0 
+tail 8
+chksum 0x2d
+load 0x3ffe8420, len 3328, room 0 
+tail 0
+chksum 0x39
+csum 0x39
+I (43) boot: ESP-IDF v3.4-dev-383-gb921e0c3 2nd stage bootloader
+I (43) boot: compile time 22:16:28
+I (44) boot: SPI Speed      : 40MHz
+I (50) boot: SPI Mode       : DOUT
+I (56) boot: SPI Flash Size : 1MB
+I (63) boot: Partition Table:
+I (68) boot: ## Label            Usage          Type ST Offset   Length
+I (79) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (91) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (102) boot:  2 factory          factory app      00 00 00010000 000f0000
+I (114) boot: End of partition table
+I (120) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x15548 ( 87368) map
+0x40210010: _stext at ??:?
+
+I (172) esp_image: segment 1: paddr=0x00025560 vaddr=0x40225558 size=0x05a94 ( 23188) map
+I (183) esp_image: segment 2: paddr=0x0002affc vaddr=0x3ffe8000 size=0x003e0 (   992) load
+I (184) esp_image: segment 3: paddr=0x0002b3e4 vaddr=0x40100000 size=0x00080 (   128) load
+I (197) esp_image: segment 4: paddr=0x0002b46c vaddr=0x40100080 size=0x04490 ( 17552) load
+I (218) boot: Loaded app from partition at offset 0x10000
+I (343) gpio: GPIO[0]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (347) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (358) main: Initialized
+I (366) Test: The integration Test intergrationTest1 has passed.
+ 
+ 
+ Unit test
+
+ Checking Python dependencies...
+Python requirements from /home/trex/esp/ESP8266_RTOS_SDK/requirements.txt are satisfied.
+Executing action: monitor
+Running idf_monitor in directory /home/trex/esp/LAB3
+Executing "/home/trex/.espressif/python_env/rtos3.4_py3.8_env/bin/python /home/trex/esp/ESP8266_RTOS_SDK/tools/idf_monitor.py -p /dev/ttyUSB0 -b 74880 /home/trex/esp/LAB3/build/hello-world.elf -m '/home/trex/.espressif/python_env/rtos3.4_py3.8_env/bin/python' '/home/trex/esp/ESP8266_RTOS_SDK/tools/idf.py' '-p' '/dev/ttyUSB0'"...
+--- idf_monitor on /dev/ttyUSB0 74880 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+ ets Jan  8 2013,rst cause:1, boot mode:(3,6)
+
+load 0x40100000, len 7032, room 16 
+tail 8
+chksum 0x94
+load 0x3ffe8408, len 24, room 0 
+tail 8
+chksum 0x2d
+load 0x3ffe8420, len 3328, room 0 
+tail 0
+chksum 0x39
+csum 0x39
+I (43) boot: ESP-IDF v3.4-dev-383-gb921e0c3 2nd stage bootloader
+I (43) boot: compile time 22:16:28
+I (44) boot: SPI Speed      : 40MHz
+I (50) boot: SPI Mode       : DOUT
+I (56) boot: SPI Flash Size : 1MB
+I (63) boot: Partition Table:
+I (68) boot: ## Label            Usage          Type ST Offset   Length
+I (79) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (91) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (102) boot:  2 factory          factory app      00 00 00010000 000f0000
+I (114) boot: End of partition table
+I (120) esp_image: segment 0: paddr=0x00010010 vaddr=0x40210010 size=0x148ac ( 84140) map
+0x40210010: _stext at ??:?
+
+I (171) esp_image: segment 1: paddr=0x000248c4 vaddr=0x402248bc size=0x0593c ( 22844) map
+I (181) esp_image: segment 2: paddr=0x0002a208 vaddr=0x3ffe8000 size=0x003e0 (   992) load
+I (182) esp_image: segment 3: paddr=0x0002a5f0 vaddr=0x40100000 size=0x00080 (   128) load
+I (196) esp_image: segment 4: paddr=0x0002a678 vaddr=0x40100080 size=0x04490 ( 17552) load
+I (216) boot: Loaded app from partition at offset 0x10000
+I (247) gpio: GPIO[0]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (252) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (263) Test: The Unit Test unitTesti2cMasterInit_ has passed.
+
+Verification Testing 
+Checking Python dependencies...
+Python requirements from /home/trex/esp/ESP8266_RTOS_SDK/requirements.txt are satisfied.
+Executing action: monitor
+Running idf_monitor in directory /home/trex/esp/LAB3
+Executing "/home/trex/.espressif/python_env/rtos3.4_py3.8_env/bin/python /home/trex/esp/ESP8266_RTOS_SDK/tools/idf_monitor.py -p /dev/ttyUSB0 -b 74880 /home/trex/esp/LAB3/build/hello-world.elf -m '/home/trex/.espressif/python_env/rtos3.4_py3.8_env/bin/python' '/home/trex/esp/ESP8266_RTOS_SDK/tools/idf.py' '-p' '/dev/ttyUSB0'"...
+--- idf_monitor on /dev/ttyUSB0 74880 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+ ets Jan  8 2013,rst cause:1, boot mode:(3,6)
+
+load 0x40100000, len 5140, room 16 
+tail 4
+chksum 0x10
+load 0x3ffe8408, len 24, room 4 
+tail 4
+chksum 0xa9
+load 0x3ffe8420, len 1024, room 4 
+tail 12
+chksum 0xa9
+csum 0xa9
+I (208) gpio: GPIO[0]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (212) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 
+I (223) main: Initialized
+I (231) Test: The integration Test intergrationTest1 has passed.
+

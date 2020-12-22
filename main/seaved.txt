@@ -1,0 +1,61 @@
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <math.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/queue.h"
+
+#include "driver/gpio.h"
+
+#include "esp_log.h"
+#include "esp_system.h"
+#include "semphr.h"
+
+static const char *TAG = "main";
+
+
+float linearActivation(float x){
+    float gradient = 2.0;
+    float y_intercept = 3.0;
+    return (gradient*x) + y_intercept;
+}
+
+
+float sigmoidActivation(float linear_activation){
+    return 1.0/(1.0 + exp(-linear_activation));
+}
+
+void test_linearActivation(void *arg){
+    float ret;
+    ret = linearActivation(0);
+    assert(ret== 3.0);
+    ESP_LOGI(TAG, "Test 1 passed");
+}
+// Unit test
+void test_sigmiodActivation(void *arg){
+    float ret;
+    ret = sigmoidActivation(0);
+    assert(ret == 0.5);
+    ESP_LOGI(TAG, "Test 2 passed");
+}
+
+void nueron(void *arg){
+    float out1;
+    float out2;
+    out1 = linearActivation(-1.5);
+    out2 = sigmoidActivation(out1);
+    //ESP_LOGI(TAG, "Test 3: %d", (int)out2);
+    assert(out2 == 0.5);
+    ESP_LOGI(TAG, "Test 3 passed");
+}
+void app_main(void){
+    test_linearActivation(NULL);
+    test_sigmiodActivation(NULL);
+    nueron(NULL);
+    while (1) {
+    }
+}
+
+
